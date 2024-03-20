@@ -158,6 +158,19 @@ def format_output(students):
 
 formatted_students = format_output(ogrenciler)
 print(formatted_students)
+ # 2.yol
+
+for i, x in enumerate(ogrenciler,1):
+    if i<4:
+        print("Mühendislik Fakültesi",i, ". öğrenci:",x)
+        i+=1
+    else:
+        i-= 3
+        print("Tıp Fakültesi", i, ". öğrenci: ",x)
+
+
+# 3. yol
+[print("Mühendislik Fakültesi{}. öğrenci: {}".format(index,values)) ,if index<4]
 
 ############
 # GÖREV 7
@@ -182,6 +195,11 @@ formatted_output = [
 output_str = "\n".join(formatted_output)
 print(output_str)
 
+#########
+# 2.YOL
+########
+for ders_kodu, kredi, kontenjan in zip(ders_kodu, kredi, kontenjan):
+    print(f"Kredisi {kredi} olan {ders_kodu} kodlu dersin kontenjanı {kontenjan} kişidir.")
 #############
 # GÖREV 8
 #############
@@ -200,4 +218,14 @@ def check_sets_and_return_unique(k1, k2):
 
 unique_from_kume2 = check_sets_and_return_unique(kume1, kume2)
 unique_from_kume2
+
+# 2.yol
+def kume(set1, set2):
+    if set1.issuperset(set2):
+        print(set1.intersection(set2))
+    else:
+        print(set2.difference(set1))
+
+kume(kume1, kume2)
+kume(kume2, kume1)
 

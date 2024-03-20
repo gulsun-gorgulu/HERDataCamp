@@ -30,6 +30,8 @@ new_columns = [f'{col.upper()}_FLAG' if 'no' not in col else col.upper() for col
 
 print(new_columns)
 
+2.yol
+
 ################
 # GÖREV 3
 ################
@@ -48,5 +50,19 @@ og_list = ["abbrev", "no_previous"]
 new_cols = [col for col in df.columns if col not in og_list]
 
 new_df = df[new_cols]
+
+#2. yol
+
+import seaborn as sns
+import pandas as pd
+pd.set_option('display.max_row',None)
+pd.set_option('display.max_columns',None)
+pd.set_option('display.width',None)
+
+df = sns.load_dataset("car_crashes")
+df.columns
+df.info
+
+
 
 
